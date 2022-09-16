@@ -1,0 +1,22 @@
+@startuml
+class Foo {
+  + int Bar { get; init; }
+}
+
+class Foo1 {
+    + int Bar1 { get; init; }
+    # EqualityContract { get; }
+    + ToString() : string
+    # PrintMembers(builder:StringBuilder) : bool
+    + Equals(obj:object?) : bool
+    + Equals(other:Foo1?) : bool
+    + GetHashCode() : int
+    + bool operator !=(Foo1 left, Foo1? right)
+    + bool operator ==(Foo1 left, Foo1? right)
+}
+interface IEquatable<Foo1>     
+
+IEquatable <|.. Foo1
+
+Foo -[hidden] Foo1
+@enduml

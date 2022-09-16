@@ -4,7 +4,6 @@
     <list default="true" id="5ed9f8ba-87e0-4208-b6ef-48efb7f4a3d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RecordDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RecordDemo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecordDemo/Foo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecordDemo/Foo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecordDemo/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecordDemo/UnitTest1.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +43,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663354440149</updated>
-      <workItem from="1663354444451" duration="5078000" />
+      <workItem from="1663354444451" duration="6014000" />
     </task>
     <servers />
   </component>
