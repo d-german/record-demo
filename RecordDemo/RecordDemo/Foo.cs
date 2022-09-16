@@ -18,21 +18,21 @@ public class Foo1 : IEquatable<Foo1>
 
     public override string ToString()
     {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.Append("Foo1");
+        var stringBuilder = new StringBuilder();
+        stringBuilder.Append(nameof(Foo1));
         stringBuilder.Append(" { ");
         if (PrintMembers(stringBuilder))
         {
-            stringBuilder.Append(" ");
+            stringBuilder.Append(' ');
         }
 
-        stringBuilder.Append("}");
+        stringBuilder.Append('}');
         return stringBuilder.ToString();
     }
 
     protected virtual bool PrintMembers(StringBuilder builder)
     {
-        builder.Append("Bar");
+        builder.Append(nameof(Bar1));
         builder.Append(" = ");
         builder.Append(Bar1);
         return true;
@@ -45,12 +45,7 @@ public class Foo1 : IEquatable<Foo1>
 
     public static bool operator ==(Foo1 left, Foo1? right)
     {
-        if ((Foo1)left != right)
-        {
-            return left.Equals(right);
-        }
-
-        return true;
+        return !(left != right) || left.Equals(right);
     }
 
     public override bool Equals(object? obj)

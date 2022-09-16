@@ -1,3 +1,5 @@
+using NuGet.Frameworks;
+
 namespace RecordDemo;
 
 public class Tests
@@ -45,7 +47,7 @@ public class Tests
             Pressure = 30
         };
 
-        Assert.That(weatherData1, Is.Not.EqualTo(weatherData2));
+        Assert.That(weatherData1, Is.Not.EqualTo(weatherData2)); // EqualTo tests two items for equality
         Assert.Multiple(() =>
         {
             Assert.That(weatherData1.Temperature, Is.EqualTo(weatherData2.Temperature));
@@ -77,6 +79,34 @@ public class Tests
     [Test]
     public void Foo1EqualityChecks()
     {
-        
+        var foo1 = new Foo1 { Bar1 = 1 };
+        var foo2 = new Foo1 { Bar1 = 1 };
+
+        Assert.That(foo1, Is.EqualTo(foo2));
+        Assert.That(foo1.ToString(), Is.EqualTo("Foo1 { Bar1 = 1 }"));
+        Assert.That(foo2.ToString(), Is.EqualTo("Foo1 { Bar1 = 1 }"));
+    }
+
+    [Test]
+    public void CopyWithTest()
+    {
+        var weatherDataRecord1 = new WeatherDataRecord
+        {
+            Temperature = 100,
+            Humidity = 50,
+            Pressure = 30
+        };
+
+        var weatherDataRecord2 = weatherDataRecord1;
+
+        Assert.That(weatherDataRecord1, Is.SameAs(weatherDataRecord2)); // SameAs tests that two references are the same object
+        Assert.That(weatherDataRecord2.ToString(), Is.EqualTo("WeatherDataRecord { Temperature = 100, Humidity = 50, Pressure = 30 }"));
+
+        var weatherDataRecord3 = weatherDataRecord1 with { };
+        Assert.That(weatherDataRecord1, Is.EqualTo(weatherDataRecord3));
+        Assert.That(weatherDataRecord1, Is.Not.SameAs(weatherDataRecord3));
+
+        var weatherDataRecord4 = weatherDataRecord1 with { Temperature = 120 };
+        Assert.That(weatherDataRecord4.ToString(), Is.EqualTo("WeatherDataRecord { Temperature = 120, Humidity = 50, Pressure = 30 }"));
     }
 }

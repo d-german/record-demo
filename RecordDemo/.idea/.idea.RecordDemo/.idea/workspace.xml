@@ -3,13 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="5ed9f8ba-87e0-4208-b6ef-48efb7f4a3d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RecordDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RecordDemo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecordDemo/RecordDemo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RecordDemo/RecordDemo.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecordDemo/Foo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecordDemo/Foo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecordDemo/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecordDemo/UnitTest1.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/551b3420acd5f15271a13c7d18af2ca3bf5c8317568895a1fe16921f6c36d0/SameAsConstraint.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/866fe33c149b6c91ce36d87bf1485dd3d8c46c9acf7593f805a11a049cdb4/Is.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -40,7 +44,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663354440149</updated>
-      <workItem from="1663354444451" duration="2377000" />
+      <workItem from="1663354444451" duration="5078000" />
     </task>
     <servers />
   </component>
