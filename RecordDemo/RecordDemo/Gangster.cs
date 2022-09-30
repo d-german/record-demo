@@ -8,10 +8,11 @@ public record Gangster
     private string? FirstName { get; init; } = "Al";
     private string? LastName { get; init; } = "Capone";
 
-    ImmutableList<string>? NickNames { get; init; } = ImmutableList.Create(
-        "Scarface",
-        "Big Al",
-        "The Big Fellow",
-        "Snorky",
-        "King Alphonse");
+    ImmutableList<string>? NickNames { get; init; } =
+        ImmutableList.Create(
+            "Scarface",
+            "Big Al",
+            "The Big Fellow",
+            "Snorky",
+            "King Alphonse");
 }
