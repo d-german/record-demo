@@ -83,6 +83,7 @@ public class Tests
         var foo2 = new Foo1 { Bar1 = 1 };
 
         Assert.That(foo1, Is.EqualTo(foo2));
+        Assert.That(foo1.GetHashCode(), Is.EqualTo(foo2.GetHashCode()));
         Assert.That(foo1.ToString(), Is.EqualTo("Foo1 { Bar1 = 1 }"));
         Assert.That(foo2.ToString(), Is.EqualTo("Foo1 { Bar1 = 1 }"));
     }
@@ -108,5 +109,25 @@ public class Tests
 
         var weatherDataRecord4 = weatherDataRecord1 with { Temperature = 120 };
         Assert.That(weatherDataRecord4.ToString(), Is.EqualTo("WeatherDataRecord { Temperature = 120, Humidity = 50, Pressure = 30 }"));
+    }
+
+    [Test]
+    public void GangsterTest()
+    {
+        var g1 = new Gangster();
+        var g2 = new Gangster();
+
+        Assert.That(g1, Is.Not.EqualTo(g2));
+        Assert.That(g1.GetHashCode(), Is.Not.EqualTo(g2.GetHashCode()));
+        Assert.That(g1.ToString(), Is.EqualTo("Gangster { }"));
+        Assert.That(g2.ToString(), Is.EqualTo("Gangster { }"));
+
+        var g3 = g1 with { };
+        
+        Assert.That(g3.ToString(), Is.EqualTo("Gangster { }"));
+
+        Assert.That(g1, Is.EqualTo(g3));
+        Assert.That(g1, Is.Not.SameAs(g2));
+        Assert.That(g1.GetHashCode(), Is.EqualTo(g3.GetHashCode()));
     }
 }

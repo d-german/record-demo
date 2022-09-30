@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5ed9f8ba-87e0-4208-b6ef-48efb7f4a3d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RecordDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RecordDemo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecordDemo/Foo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecordDemo/Foo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecordDemo/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecordDemo/UnitTest1.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +13,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/551b3420acd5f15271a13c7d18af2ca3bf5c8317568895a1fe16921f6c36d0/SameAsConstraint.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/866fe33c149b6c91ce36d87bf1485dd3d8c46c9acf7593f805a11a049cdb4/Is.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c6ad457575d35dcbff26c9a5e3fb1d92f1d3c55f25ef6ebf475367b5d8/List.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/da9414fffb513cec5721f74bc35426e26be94b71f8a3bcd71763d1444839ec5/EqualityComparer.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -30,6 +32,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.49794662",
+    "last_opened_file_path": "C:/CS236-projects/record-demo/RecordDemo/RecordDemo",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
@@ -43,7 +47,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663354440149</updated>
-      <workItem from="1663354444451" duration="6014000" />
+      <workItem from="1663354444451" duration="6663000" />
+      <workItem from="1664565389695" duration="1805000" />
     </task>
     <servers />
   </component>
@@ -52,7 +57,37 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RecordDemo/UnitTest1.cs</url>
+          <line>121</line>
+          <properties documentPath="C:\CS236-projects\record-demo\RecordDemo\RecordDemo\UnitTest1.cs" initialLine="121" containingFunctionPresentation="method 'GangsterTest'">
+            <startOffsets>
+              <option value="3553" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3625" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
