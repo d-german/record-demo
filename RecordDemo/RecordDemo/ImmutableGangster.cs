@@ -4,15 +4,9 @@ namespace RecordDemo;
 
 public record ImmutableGangster
 {
-    int Id { get; init; }
-    private string? FirstName { get; init; } = "Al";
-    private string? LastName { get; init; } = "Capone";
+    public int Id { get; init; }
+    public string? FirstName { get; init; }
+    public string? LastName { get; init; }
 
-    ImmutableList<string>? NickNames { get; init; } =
-        ImmutableList.Create(
-            "Scarface",
-            "Big Al",
-            "The Big Fellow",
-            "Snorky",
-            "King Alphonse");
+    public ImmutableList<string>? NickNames { get; init; }
 }

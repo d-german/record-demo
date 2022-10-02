@@ -1,3 +1,4 @@
+using System.Collections.Immutable;
 using NuGet.Frameworks;
 
 namespace RecordDemo;
@@ -114,40 +115,68 @@ public class Tests
     [Test]
     public void GangsterTest()
     {
-        var g1 = new Gangster();
-        var g2 = new Gangster();
+        var g1 = new Gangster
+        {
+            Id = 0,
+            FirstName = "Al",
+            LastName = "Capone",
+            NickNames = new List<string>
+            {
+                "Scarface",
+                "Big Al",
+                "The Big Fellow",
+                "Snorky",
+                "King Alphonse"
+            }
+        };
 
-        Assert.That(g1, Is.Not.EqualTo(g2));
-        Assert.That(g1.GetHashCode(), Is.Not.EqualTo(g2.GetHashCode()));
-        Assert.That(g1.ToString(), Is.EqualTo("Gangster { }"));
-        Assert.That(g2.ToString(), Is.EqualTo("Gangster { }"));
+        var g2 = g1 with { };
 
-        var g3 = g1 with { };
-        
-        Assert.That(g3.ToString(), Is.EqualTo("Gangster { }"));
-
-        Assert.That(g1, Is.EqualTo(g3));
+        Assert.That(g1, Is.EqualTo(g2));
         Assert.That(g1, Is.Not.SameAs(g2));
-        Assert.That(g1.GetHashCode(), Is.EqualTo(g3.GetHashCode()));
+        Assert.That(g1.GetHashCode(), Is.EqualTo(g2.GetHashCode()));
+        Assert.That(g1.NickNames, Is.SameAs(g2.NickNames)); // both nicknames are the same object
+
+        g1.NickNames.Add("The Mad Dog"); // this updates both g1 and g2 nicknames since they are the same object
+
+        Assert.That(g2.NickNames.Contains("The Mad Dog"), Is.True);
+
+        var g3 = g1 with { NickNames = new List<string>(g1.NickNames) }; // this creates a new list of nicknames
+
+        Assert.That(g1.NickNames, Is.Not.SameAs(g3.NickNames));
+
+        g1.NickNames.Add("The Mad Dog 2"); // this only updates g1 nicknames
+
+        Assert.That(g3.NickNames.Contains("The Mad Dog 2"), Is.False);
+        Assert.That(g1.GetHashCode(), Is.Not.EqualTo(g3.GetHashCode()));
     }
-    
+
     [Test]
     public void ImmutableGangsterTest()
     {
-        var g1 = new ImmutableGangster();
-        var g2 = new ImmutableGangster();
+        var g1 = new ImmutableGangster
+        {
+            Id = 0,
+            FirstName = "Al",
+            LastName = "Capone",
+            NickNames = ImmutableList.Create(
+                "Scarface",
+                "Big Al",
+                "The Big Fellow",
+                "Snorky",
+                "King Alphonse")
+        };
+        var g2 = g1 with { };
 
-        Assert.That(g1, Is.Not.EqualTo(g2));
-        Assert.That(g1.GetHashCode(), Is.Not.EqualTo(g2.GetHashCode()));
-        Assert.That(g1.ToString(), Is.EqualTo("ImmutableGangster { }"));
-        Assert.That(g2.ToString(), Is.EqualTo("ImmutableGangster { }"));
-
-        var g3 = g1 with { };
-        
-        Assert.That(g3.ToString(), Is.EqualTo("ImmutableGangster { }"));
-
-        Assert.That(g1, Is.EqualTo(g3));
+        Assert.That(g1, Is.EqualTo(g2));
         Assert.That(g1, Is.Not.SameAs(g2));
-        Assert.That(g1.GetHashCode(), Is.EqualTo(g3.GetHashCode()));
+        Assert.That(g1.GetHashCode(), Is.EqualTo(g2.GetHashCode()));
+        Assert.That(g1.NickNames, Is.SameAs(g2.NickNames)); // both nicknames are the same object
+
+        // g1.NickNames.Add("The Mad Dog"); // this will not compile since NickNames is an immutable list
+
+        var g3 = g1 with { NickNames = g1.NickNames.Add("The Mad Dog") }; // this creates a new list of nicknames
+        Assert.That(g1.NickNames, Is.Not.SameAs(g3.NickNames)); // g1 and g3 have different nicknames
+        Assert.That(g1.GetHashCode(), Is.Not.EqualTo(g3.GetHashCode()));
     }
 }

@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5ed9f8ba-87e0-4208-b6ef-48efb7f4a3d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RecordDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RecordDemo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecordDemo/Gangster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecordDemo/Gangster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecordDemo/ImmutableGangster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecordDemo/ImmutableGangster.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecordDemo/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecordDemo/UnitTest1.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +16,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/23ac3741ace945aa8fb09ed04ff9815e83498/_82c0f/IIListProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/52cd844476ec4091838909409447be01a23688/_13f9f/IList.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/52cd844476ec4091838909409447be01a23688/_ec32c/IEnumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/52cd844476ec4091838909409447be01a23688/_f2557/ICollection.cs" root0="SKIP_HIGHLIGHTING" />
@@ -22,6 +27,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c6ad457575d35dcbff26c9a5e3fb1d92f1d3c55f25ef6ebf475367b5d8/List.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c949fbd93a3bb5df9cd45efdd19ff6888a4828a0a1124adb2df0488d21ad5f/ImmutableList_1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/da9414fffb513cec5721f74bc35426e26be94b71f8a3bcd71763d1444839ec5/EqualityComparer.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f5a2ccf8d64e7aa05089a63a768244d9f2dc55854b3a5ab1b61126bdc8f7ebe2/ToCollection.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -62,6 +68,32 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnitTestsCoverage.Settings">
+    <option name="coveragePercentColumnWidth" value="150" />
+    <option name="sortOrder" value="DESCENDING" />
+    <option name="sortedColumn" value="1" />
+    <option name="symbolColumnWidth" value="286" />
+    <coverage-tree-state>
+      <expand>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 77% 32/141" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 77% 32/141" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="RecordDemo 77% 32/141" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 77% 32/141" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="RecordDemo 77% 32/141" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="RecordDemo 77% 32/141" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+      </expand>
+      <select />
+    </coverage-tree-state>
+  </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
@@ -77,50 +109,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/RecordDemo/UnitTest1.cs</url>
-          <line>136</line>
-          <properties documentPath="C:\CS236-projects\record-demo\RecordDemo\RecordDemo\UnitTest1.cs" initialLine="116" containingFunctionPresentation="method 'GangsterTest'">
-            <startOffsets>
-              <option value="4008" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4041" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/RecordDemo/UnitTest1.cs</url>
-          <line>137</line>
-          <properties documentPath="C:\CS236-projects\record-demo\RecordDemo\RecordDemo\UnitTest1.cs" initialLine="117" containingFunctionPresentation="method 'GangsterTest'">
-            <startOffsets>
-              <option value="4050" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4083" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/RecordDemo/UnitTest1.cs</url>
-          <line>144</line>
-          <properties documentPath="C:\CS236-projects\record-demo\RecordDemo\RecordDemo\UnitTest1.cs" initialLine="124" containingFunctionPresentation="method 'GangsterTest'">
-            <startOffsets>
-              <option value="4358" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4379" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
