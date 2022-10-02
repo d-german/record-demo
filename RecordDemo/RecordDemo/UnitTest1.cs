@@ -114,17 +114,17 @@ public class Tests
     [Test]
     public void GangsterTest()
     {
-        var g1 = new Gangster();
-        var g2 = new Gangster();
+        var g1 = new ImmutableGangster();
+        var g2 = new ImmutableGangster();
 
         Assert.That(g1, Is.Not.EqualTo(g2));
         Assert.That(g1.GetHashCode(), Is.Not.EqualTo(g2.GetHashCode()));
-        Assert.That(g1.ToString(), Is.EqualTo("Gangster { }"));
-        Assert.That(g2.ToString(), Is.EqualTo("Gangster { }"));
+        Assert.That(g1.ToString(), Is.EqualTo("ImmutableGangster { }"));
+        Assert.That(g2.ToString(), Is.EqualTo("ImmutableGangster { }"));
 
         var g3 = g1 with { };
         
-        Assert.That(g3.ToString(), Is.EqualTo("Gangster { }"));
+        Assert.That(g3.ToString(), Is.EqualTo("ImmutableGangster { }"));
 
         Assert.That(g1, Is.EqualTo(g3));
         Assert.That(g1, Is.Not.SameAs(g2));

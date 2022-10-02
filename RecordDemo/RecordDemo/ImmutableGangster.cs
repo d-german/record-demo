@@ -2,7 +2,7 @@
 
 namespace RecordDemo;
 
-public record Gangster
+public record ImmutableGangster
 {
     int Id { get; init; }
     private string? FirstName { get; init; } = "Al";
